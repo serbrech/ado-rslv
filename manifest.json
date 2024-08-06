@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ado-rslv",
+  "version": "1.0",
+  "description": "Resolve all pull request comments in a single click!",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "images/icon128.png"
+    }
+  },
+  "background": [
+    {
+      "matches": ["*://*.visualstudio.com/*"],
+      "scripts": ["content.js"],
+      "persistent": false
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.visualstudio.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "notifications"
+  ]
+}
