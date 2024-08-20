@@ -1,0 +1,41 @@
+{
+    "name": "ado-rslv",
+    "version": "1.0.0",
+    "private": true,
+    "description": "A chrome extension to mass resolve ADO comments",
+    "scripts": {
+      "prettier": "npx prettier **/*.{md,html,json} -w",
+      "lint": "eslint **/*.js",
+      "lint:fix": "npm run lint -- --fix"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/serbrech/ado-rslv.git"
+    },
+    "keywords": [],
+    "author": "Stephane Erbrech",
+    "license": "Apache 2.0",
+    "bugs": {
+      "url": "https://github.com/serbrech/ado-rslv/issues"
+    },
+    "homepage": "https://github.com/serbrech/ado-rslv",
+    "devDependencies": {
+      "@eslint/js": "9.9.0",
+      "chrome-types": "0.1.299",
+      "eslint": "9.9.0",
+      "eslint-config-prettier": "9.1.0",
+      "eslint-plugin-jest": "28.8.0",
+      "eslint-plugin-prettier": "5.2.1",
+      "globals": "15.9.0",
+      "lint-staged": "15.2.9",
+      "prettier": "3.3.3"
+    },
+    "lint-staged": {
+      "**/*.js": [
+        "npx eslint --fix"
+      ],
+      "**/*.{md,html,json}": [
+        "npx prettier --write"
+      ]
+    }
+  }
