@@ -3,11 +3,6 @@
     "version": "1.0.0",
     "private": true,
     "description": "A chrome extension to mass resolve ADO comments",
-    "scripts": {
-      "prettier": "npx prettier **/*.{md,html,json} -w",
-      "lint": "eslint **/*.js",
-      "lint:fix": "npm run lint -- --fix"
-    },
     "repository": {
       "type": "git",
       "url": "git+https://github.com/serbrech/ado-rslv.git"
@@ -37,5 +32,11 @@
       "**/*.{md,html,json}": [
         "npx prettier --write"
       ]
+    },
+    "scripts": {
+      "prettier": "npx prettier **/*.{md,html,json} -w",
+      "lint": "eslint **/*.js",
+      "lint:fix": "npm run lint -- --fix",
+      "pack": "zip -r rslv-pkg . -x '*.git*' -x package.json -x package-lock.json -x 'node_modules/*' -x .gitignore"
     }
   }
