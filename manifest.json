@@ -9,21 +9,11 @@
       "128": "images/icon128.png"
     }
   },
-  "background": [
-    {
-      "matches": ["*://*.visualstudio.com/*"],
-      "scripts": ["content.js"],
-      "persistent": false
-    }
-  ],
-  "content_scripts": [
-    {
-      "matches": ["*://*.visualstudio.com/*"],
-      "js": ["content.js"]
-    }
-  ],
+  "background":{
+    "service_worker": "background.js"
+  },
   "permissions": [
     "activeTab",
-    "notifications"
+    "scripting"
   ]
 }
